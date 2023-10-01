@@ -1,14 +1,13 @@
 import React from "react";
 
-const About = () => {
+const Data = () => {
 	return (
 		<div>
 			<h1>
-				GeeksforGeeks is a Computer
-				Science portal for geeks.
+				The database entries can be seen below
 			</h1>
 		</div>
 	);
 };
 
-export default About;
+export default Data;
