@@ -32,10 +32,17 @@ function Query() {
       .catch(err => console.log(err));
     })
   
+    const [name, setName] = useState([]);
     const [ingredients, setIngredients] = useState("");
     const [people, setPeople] = useState("");
     const [customerIngredients, setCustomerIngredients] = useState([]);
     const url = 'https://a2sm8vu4k1.execute-api.eu-north-1.amazonaws.com/testing'
+    // useEffect(() => {
+    //   names()
+    // }, [])
+    // const names = async () => {
+    //   const response = await fetch('')
+    // }
     const handleSubmit = async (e) => {
       e.preventDefault();
       const config = {
@@ -55,6 +62,7 @@ function Query() {
         });
         if (res.status === 200) {
           alert(await res.json());
+          setName(await res.json())
         } else {
           alert("Some error occured");
         }
@@ -93,6 +101,13 @@ function Query() {
               </label>
               <input type="submit"/>
             </form>
+            <ol className="list-group list-group-numbered">
+                {name.map((data) => {
+                  return(
+                  <li className="list-group-item" key={data.id}> {data.title} </li>
+                  )
+                })}
+            </ol>
             </header>
         </div>
         );

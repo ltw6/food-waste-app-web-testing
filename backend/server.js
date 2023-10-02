@@ -8,7 +8,7 @@ app.use(cors())
 var db = mysql.createConnection({
     host     : 'ingredients-db.c7z9nugx4thi.eu-north-1.rds.amazonaws.com',
     user     : 'admin',
-    password : 'L3wisD0g01?',
+    password : 'L3wisD0g02?',
     port     : '3306',
     database: 'ingredients'
   });
@@ -28,7 +28,7 @@ app.get('/customers', (req, res) => {
 app.get('/ingredients', (req, res) => {
     const sql = "SELECT * FROM ingredient"
     db.query(sql, (err, data) => {
-        if (err) return res.json(err);
+        if(err) return res.json(err);
         return res.json(data);
     })
 })

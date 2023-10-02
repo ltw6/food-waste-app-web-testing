@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Routes, Route }
 import Home from './pages';
 import Query from './pages/query';
 import Data from './pages/data';
+import {useState} from "react";
+import {useEffect} from "react";
 
 
 function App() {
