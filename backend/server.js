@@ -6,11 +6,11 @@ const app = express()
 app.use(cors())
 
 var db = mysql.createConnection({
-    host     : 'ingredients-db.c7z9nugx4thi.eu-north-1.rds.amazonaws.com',
-    user     : 'admin',
-    password : 'L3wisD0g02?',
-    port     : '3306',
-    database: 'ingredients'
+    host     : 'HOST',
+    user     : 'USER',
+    password : 'PASSWORD',
+    port     : 'PORT',
+    database: 'DB'
   });
 
 app.get('/', (re, res) => {
