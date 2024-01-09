@@ -36,7 +36,7 @@ function Query() {
     const [ingredients, setIngredients] = useState("");
     const [people, setPeople] = useState("");
     const [customerIngredients, setCustomerIngredients] = useState([]);
-    const url = 'https://a2sm8vu4k1.execute-api.eu-north-1.amazonaws.com/testing'
+    const url = 'REST API URL'
     // useEffect(() => {
     //   names()
     // }, [])
