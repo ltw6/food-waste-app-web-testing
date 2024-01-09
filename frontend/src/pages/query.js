@@ -52,8 +52,7 @@ function Query() {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36'
         },
         body: JSON.stringify({
-          query: "I have to use up the rest of the following ingredients. Please suggest recipes for "+ people +" persons using the following ingredients: " + ingredients +""
-          //query: "I have to use up the rest of the following ingredients. Please suggest recipes for 1 persons using the following ingredients: " + ingredients +""
+          query: "QUERY"
         })
       }
       try {
